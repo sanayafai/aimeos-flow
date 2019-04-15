@@ -17,6 +17,7 @@ use Neos\Flow\Annotations as Flow;
  * Controller for JQuery based adminisration interface.
  * @package flow
  * @subpackage Controller
+ * @Flow\Scope("session")
  */
 class JqadmController extends \Neos\Flow\Mvc\Controller\ActionController
 {

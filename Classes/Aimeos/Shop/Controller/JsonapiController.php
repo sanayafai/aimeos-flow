@@ -19,6 +19,7 @@ use Zend\Diactoros\Response;
  *
  * @package flow
  * @subpackage Controller
+ * @Flow\Scope("session")
  */
 class JsonapiController extends \Neos\Flow\Mvc\Controller\ActionController
 {

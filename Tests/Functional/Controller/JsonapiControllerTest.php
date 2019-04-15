@@ -57,6 +57,8 @@ class JsonapiControllerTest extends \Neos\Flow\Tests\FunctionalTestCase
 		$content = json_encode( ['data' => ['attributes' => ['product.id' => $json['data'][0]['id']]]] );
 		$response = $this->browser->request( 'http://localhost/unittest/jsonapi/basket', 'POST', $params, [], [], $content );
 		$json = json_decode( $response->getContent(), true );
+echo $response->getContent();
+
 		$this->assertEquals( 'CNC', $json['included'][0]['attributes']['order.base.product.prodcode'] );
 	}
 
